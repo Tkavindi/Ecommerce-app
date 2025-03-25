@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Category = () => {
+const Category = ({category, banner}) => {
   return (
-    <div>Category</div>
+    <>
+
+    </>
   )
 }
 
