@@ -5,6 +5,7 @@ import Category from "./pages/Category";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -13,14 +14,16 @@ export default function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/" element={<Category/>}/>
-        <Route path="/" element={<Category/>}/>
-        <Route path="/" element={<Category/>}/>
-        <Route path="/" element={<Product/>}/>
-        <Route path="/" element={<Cart/>}/>
-        <Route path="/" element={<Login/>}/>
+        <Route path="/men" element={<Category/>}/>
+        <Route path="/women" element={<Category/>}/>
+        <Route path="/kids" element={<Category/>}/>
+        <Route path="/product" element={<Product/>}/>
+          <Route path=":productId" element={<Product/>}></Route>
+        <Route path="/cart-page" element={<Cart/>}/>
+        <Route path="/login" element={<Login/>}/>
       </Routes>
       </BrowserRouter>
+      <Footer/>
       
     </main>
   )
