@@ -11,7 +11,7 @@ const Item = ({ id, name, image, new_price, old_price }) => {
           className="h-12 w-12 bg-white rounded-full flexCenter absolute top-1/2 
           bottom-1/2 !py-2 z-20 scale-0 group-hover:scale-100 transition-all duration-700 "
         ><FaSearch className="scale-125 hover:rotate-90 transition-all duration-200"/></Link>
-        <img src={image} alt="productImage" className="w-full block object-cover group-hover:scale-110
+        <img onClick={window.scrollTo(0, 0)} src={image} alt="productImage" className="w-full block object-cover group-hover:scale-110
         transition-all duration-1000" />
       </div>
       <div className="p-4 overflow-hidden">

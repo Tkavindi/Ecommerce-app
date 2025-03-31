@@ -32,7 +32,7 @@ export default function App() {
             element={<Category category="kid" banner={bannerkids} />}
           />
           <Route path="/product" element={<Product />} />
-          <Route path="/product/:productId" element={<Product />} />{" "}
+          <Route path="/product/:productId" element={<Product />} />
           {/* Dynamic route for productId */}
           <Route path="/cart-page" element={<Cart />} />
           <Route path="/login" element={<Login />} />
