@@ -9,14 +9,15 @@ const cors = require("cors");
 const { type } = require("os");
 const { error } = require("console");
 const e = require("express");
+require("dotenv").config();
+
 
 app.use(express.json());
 app.use(cors());
 
 // Database connection with mongodb
-mongoose.connect(
-  "mongodb+srv://ecommercemern:Tharu%402001@cluster0.wjmsj1k.mongodb.net/ecommerce-mern?retryWrites=true&w=majority&appName=Cluster0"
-);
+mongoose.connect(process.env.MONGO_URI);
+
 
 // API creation
 app.get("/", (req, res) => {
